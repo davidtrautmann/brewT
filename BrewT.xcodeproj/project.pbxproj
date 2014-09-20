@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D18786F19CD52A80066AA4E /* TemperatureModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D18786E19CD52A80066AA4E /* TemperatureModel.swift */; };
 		8DBC067619CD488A00BBE676 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBC067519CD488A00BBE676 /* AppDelegate.swift */; };
 		8DBC067819CD488A00BBE676 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBC067719CD488A00BBE676 /* ViewController.swift */; };
 		8DBC067B19CD488A00BBE676 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DBC067919CD488A00BBE676 /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8D18786E19CD52A80066AA4E /* TemperatureModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TemperatureModel.swift; path = ../TemperatureModel.swift; sourceTree = "<group>"; };
 		8DBC067019CD488A00BBE676 /* BrewT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrewT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DBC067419CD488A00BBE676 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DBC067519CD488A00BBE676 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 		8DBC067219CD488A00BBE676 /* BrewT */ = {
 			isa = PBXGroup;
 			children = (
+				8D18786E19CD52A80066AA4E /* TemperatureModel.swift */,
 				8DBC067519CD488A00BBE676 /* AppDelegate.swift */,
 				8DBC067719CD488A00BBE676 /* ViewController.swift */,
 				8DBC067919CD488A00BBE676 /* Main.storyboard */,
@@ -214,6 +217,7 @@
 			files = (
 				8DBC067819CD488A00BBE676 /* ViewController.swift in Sources */,
 				8DBC067619CD488A00BBE676 /* AppDelegate.swift in Sources */,
+				8D18786F19CD52A80066AA4E /* TemperatureModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +343,7 @@
 				INFOPLIST_FILE = BrewT/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -349,6 +354,7 @@
 				INFOPLIST_FILE = BrewT/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -405,6 +411,7 @@
 				8DBC069119CD488B00BBE676 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8DBC069219CD488B00BBE676 /* Build configuration list for PBXNativeTarget "BrewTTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +420,7 @@
 				8DBC069419CD488B00BBE676 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
