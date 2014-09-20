@@ -10,8 +10,38 @@ import Foundation
 
 
 class TemperatureModel {
-    var tempHot: Double = 97.0
-    var tempCold: Double = 16.0
-    var tempTarget: Double = 70.0
-    var volume: Double = 400.0
+    let cWater: Float = 4.182
+    let mWater: Float = 0.999975
+    let nullKelvin: Float = 273.15
+    
+    var tempHot: Float = 0.0
+    var tempCold: Float = 0.0
+    var tempTarget: Float = 0.0
+    var volume: Float = 0.0
+    
+    var massCold: Float = 0.0
+    var massHot: Float = 0.0
+    var massTarget: Float = 0.0
+    
+    // Calculate result temperature
+    func calculate() {
+        var richmannFactor: Float
+        var kelvinCold = tempCold + nullKelvin
+        var kelvinHot = tempHot + nullKelvin
+        var kelvinTarget = tempTarget + nullKelvin
+        
+        massTarget = (volume / 1000) * mWater
+        richmannFactor = (cWater * (kelvinTarget - kelvinHot)) / (cWater * (kelvinCold - kelvinTarget))
+        
+        massCold = (massTarget * richmannFactor) / (1 + richmannFactor)
+        massHot = massTarget - massCold
+}
+    
+    func getVolumeCold() -> String {
+        return String(format: "%.0f", (massCold / mWater) * 1000)
+    }
+    
+    func getVolumeHot() -> String {
+        return String(format: "%.0f", (massHot / mWater) * 1000)
+    }
 }

@@ -70,15 +70,8 @@
                                     <action selector="volumeSliderChanged" destination="vXZ-lx-hvc" eventType="valueChanged" id="jT2-R2-7gr"/>
                                 </connections>
                             </slider>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WyK-3O-Sr1">
-                                <rect key="frame" x="16" y="356" width="568" height="224"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Target Temperature" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X9h-8f-k7O">
-                                <rect key="frame" x="16" y="267" width="148" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tea Temperature" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X9h-8f-k7O">
+                                <rect key="frame" x="16" y="267" width="127" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -101,6 +94,18 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cold: #### ml" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rTr-0m-Mhx">
+                                <rect key="frame" x="16" y="374" width="108" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hot: #### ml" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qbi-Xv-WSl">
+                                <rect key="frame" x="485" y="374" width="99" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -108,31 +113,31 @@
                             <constraint firstItem="BhJ-NM-oZU" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="16" id="13d-Fu-boc"/>
                             <constraint firstItem="5Bk-nK-ecd" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="16" id="3rc-f8-Cx4"/>
                             <constraint firstItem="4N2-yf-qQ6" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="66" id="7Rt-bf-yoL"/>
-                            <constraint firstItem="WyK-3O-Sr1" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="16" id="7gV-gJ-xYa"/>
                             <constraint firstAttribute="trailing" secondItem="ONZ-n2-caM" secondAttribute="trailing" constant="16" id="9gv-9e-78s"/>
                             <constraint firstItem="GTP-uy-0Ux" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="16" id="9zw-gp-gWW"/>
                             <constraint firstItem="yAe-4j-Q4P" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="200" id="HjT-ZJ-uaQ"/>
                             <constraint firstItem="rAB-HD-dVr" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="200" id="J6c-wZ-nkn"/>
                             <constraint firstItem="ONZ-n2-caM" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="162" id="LEh-OE-j00"/>
                             <constraint firstItem="B5f-NH-tA6" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="16" id="LZ7-6t-zYD"/>
+                            <constraint firstItem="qbi-Xv-WSl" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="374" id="N8P-Nb-Q7F"/>
                             <constraint firstItem="JAT-Di-bag" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="133" id="NWn-XL-qRI"/>
                             <constraint firstItem="dOZ-Cr-xP2" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="66" id="Q9O-bg-6WC"/>
                             <constraint firstAttribute="trailing" secondItem="aQs-00-CAs" secondAttribute="trailing" constant="16" id="QlH-7U-gFF"/>
-                            <constraint firstAttribute="bottom" secondItem="WyK-3O-Sr1" secondAttribute="bottom" constant="20" id="RBs-Iq-8hH"/>
                             <constraint firstItem="B5f-NH-tA6" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="296" id="RUX-YT-hhp"/>
-                            <constraint firstItem="WyK-3O-Sr1" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="356" id="Rer-N7-rzX"/>
                             <constraint firstAttribute="trailing" secondItem="JAT-Di-bag" secondAttribute="trailing" constant="16" id="RiS-Ic-LiZ"/>
                             <constraint firstItem="ONZ-n2-caM" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="16" id="S9g-UN-LBb"/>
                             <constraint firstItem="4N2-yf-qQ6" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="16" id="TNO-Zc-2Av"/>
+                            <constraint firstItem="rTr-0m-Mhx" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="374" id="TYw-Jw-8oB"/>
                             <constraint firstItem="5Bk-nK-ecd" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="95" id="Tjs-03-twu"/>
                             <constraint firstItem="rAB-HD-dVr" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="16" id="UsR-Op-hon"/>
                             <constraint firstAttribute="trailing" secondItem="dOZ-Cr-xP2" secondAttribute="trailing" constant="16" id="X0z-nv-lOa"/>
                             <constraint firstAttribute="trailing" secondItem="GTP-uy-0Ux" secondAttribute="trailing" constant="16" id="Xh8-gZ-X3v"/>
                             <constraint firstItem="Vbw-Qi-rl1" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="a2C-Ac-mgf"/>
+                            <constraint firstItem="rTr-0m-Mhx" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="16" id="etY-2G-exc"/>
                             <constraint firstAttribute="trailing" secondItem="yAe-4j-Q4P" secondAttribute="trailing" constant="16" id="itD-Us-eEx"/>
                             <constraint firstAttribute="trailing" secondItem="Vbw-Qi-rl1" secondAttribute="trailing" id="k5q-G5-l9o"/>
                             <constraint firstItem="aQs-00-CAs" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="267" id="nox-8G-qBt"/>
-                            <constraint firstAttribute="trailing" secondItem="WyK-3O-Sr1" secondAttribute="trailing" constant="16" id="oi8-ir-3O6"/>
+                            <constraint firstAttribute="trailing" secondItem="qbi-Xv-WSl" secondAttribute="trailing" constant="16" id="npr-cv-Dwl"/>
                             <constraint firstItem="BhJ-NM-oZU" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="133" id="qcZ-Aj-jGu"/>
                             <constraint firstItem="X9h-8f-k7O" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="16" id="tD9-39-1qh"/>
                             <constraint firstAttribute="trailing" secondItem="5Bk-nK-ecd" secondAttribute="trailing" constant="16" id="tEr-xh-t8i"/>
@@ -151,7 +156,8 @@
                         <outlet property="coldSlider" destination="ONZ-n2-caM" id="xMe-Eo-ck1"/>
                         <outlet property="hotLabel" destination="yAe-4j-Q4P" id="7ev-Wa-lY6"/>
                         <outlet property="hotSlider" destination="GTP-uy-0Ux" id="yr6-NH-i1A"/>
-                        <outlet property="resultsTextView" destination="WyK-3O-Sr1" id="KG2-Ae-JGl"/>
+                        <outlet property="resultsLabelCold" destination="rTr-0m-Mhx" id="re5-RK-5AZ"/>
+                        <outlet property="resultsLabelHot" destination="qbi-Xv-WSl" id="nAk-vV-AjG"/>
                         <outlet property="targetLabel" destination="aQs-00-CAs" id="CJG-Hf-fQz"/>
                         <outlet property="targetSlider" destination="B5f-NH-tA6" id="jfG-oS-AfA"/>
                         <outlet property="volumeLabel" destination="dOZ-Cr-xP2" id="d8v-QS-CK7"/>
