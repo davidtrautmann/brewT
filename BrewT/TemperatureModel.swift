@@ -50,7 +50,7 @@ class TemperatureModel {
             massCold = (massTea * richmannFactor) / (1 + richmannFactor)
             massHot = massTea - massCold
         }
-}
+    }
     
     func getVolumeCold() -> String {
         return String(format: "%.0f", (massCold / mWater) * 1000)

@@ -22,8 +22,6 @@ class ViewController: UIViewController {
     @IBOutlet var resultsLabelHot   : UILabel!
     
     let model = TemperatureModel()
-    let volumeUnit  = "ml"
-    let tempUnit = "° C"
     
     override func viewDidLoad() {
         super.viewDidLoad()

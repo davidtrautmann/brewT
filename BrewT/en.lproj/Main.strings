@@ -1,0 +1,48 @@
+
+/* Class = "IBUINavigationItem"; title = "BrewT"; ObjectID = "1dm-2y-CK7"; */
+"1dm-2y-CK7.title" = "BrewT";
+
+/* Class = "IBUILabel"; text = "Volume"; ObjectID = "4N2-yf-qQ6"; */
+"4N2-yf-qQ6.text" = "Volume";
+
+/* Class = "IBUILabel"; text = "Launch Image: Zaqqy (flickr) "; ObjectID = "4XU-c0-VAk"; */
+"4XU-c0-VAk.text" = "Launch Image: Zaqqy (flickr) ";
+
+/* Class = "IBUILabel"; text = "Cold Water Temperature"; ObjectID = "BhJ-NM-oZU"; */
+"BhJ-NM-oZU.text" = "Cold Water Temperature";
+
+/* Class = "IBUILabel"; text = "° C"; ObjectID = "JAT-Di-bag"; */
+"JAT-Di-bag.text" = "° C";
+
+/* Class = "IBUILabel"; text = "Tea Temperature"; ObjectID = "X9h-8f-k7O"; */
+"X9h-8f-k7O.text" = "Tea Temperature";
+
+/* Class = "IBUILabel"; text = "° C"; ObjectID = "aQs-00-CAs"; */
+"aQs-00-CAs.text" = "° C";
+
+/* Class = "IBUIButton"; normalTitle = "Link"; ObjectID = "cd5-em-DcA"; */
+"cd5-em-DcA.normalTitle" = "Link";
+
+/* Class = "IBUILabel"; text = "ml"; ObjectID = "dOZ-Cr-xP2"; */
+"dOZ-Cr-xP2.text" = "ml";
+
+/* Class = "IBUIBarButtonItem"; title = "Settings"; ObjectID = "mdf-5N-Om3"; */
+"mdf-5N-Om3.title" = "Settings";
+
+/* Class = "IBUIViewController"; title = "Settings"; ObjectID = "nBj-QD-F5h"; */
+"nBj-QD-F5h.title" = "Settings";
+
+/* Class = "IBUILabel"; text = "Hot: #### ml"; ObjectID = "qbi-Xv-WSl"; */
+"qbi-Xv-WSl.text" = "Hot: #### ml";
+
+/* Class = "IBUILabel"; text = "Hot Water Temperature"; ObjectID = "rAB-HD-dVr"; */
+"rAB-HD-dVr.text" = "Hot Water Temperature";
+
+/* Class = "IBUILabel"; text = "Cold: #### ml"; ObjectID = "rTr-0m-Mhx"; */
+"rTr-0m-Mhx.text" = "Cold: #### ml";
+
+/* Class = "IBUIViewController"; title = "Main"; ObjectID = "vXZ-lx-hvc"; */
+"vXZ-lx-hvc.title" = "Main";
+
+/* Class = "IBUILabel"; text = "° C"; ObjectID = "yAe-4j-Q4P"; */
+"yAe-4j-Q4P.text" = "° C";
