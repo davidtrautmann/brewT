@@ -10,16 +10,16 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet var volumeSlider : UISlider!
-    @IBOutlet var volumeLabel : UILabel!
-    @IBOutlet var coldSlider : UISlider!
-    @IBOutlet var coldLabel : UILabel!
-    @IBOutlet var hotSlider : UISlider!
-    @IBOutlet var hotLabel : UILabel!
-    @IBOutlet var targetSlider : UISlider!
-    @IBOutlet var targetLabel : UILabel!
-    @IBOutlet var resultsLabelCold : UILabel!
-    @IBOutlet var resultsLabelHot : UILabel!
+    @IBOutlet var volumeSlider      : UISlider!
+    @IBOutlet var volumeField       : UITextField!
+    @IBOutlet var coldSlider        : UISlider!
+    @IBOutlet var coldField         : UITextField!
+    @IBOutlet var hotSlider         : UISlider!
+    @IBOutlet var hotField          : UITextField!
+    @IBOutlet var teaSlider         : UISlider!
+    @IBOutlet var teaField          : UITextField!
+    @IBOutlet var resultsLabelCold  : UILabel!
+    @IBOutlet var resultsLabelHot   : UILabel!
     
     let model = TemperatureModel()
     let volumeUnit  = "ml"
@@ -29,7 +29,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        refreshUI()
+        initUI()
     }
 
     override func didReceiveMemoryWarning() {
@@ -37,12 +37,26 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func viewTapped(sender : AnyObject) {
+        self.view.endEditing(true)
+    }
+    
+    func initUI() {
+        // init slider labels
+        volumeSliderChanged()
+        coldSliderChanged()
+        hotSliderChanged()
+        teaSliderChanged()
+        
+        refreshUI()
+    }
+    
     func refreshUI() {
         // Set parameter
         model.volume = volumeSlider.value
         model.tempCold = coldSlider.value
         model.tempHot = hotSlider.value
-        model.tempTarget = targetSlider.value
+        model.tempTea = teaSlider.value
         
         // Salculate masses
         model.calculate()
@@ -52,27 +66,54 @@ class ViewController: UIViewController {
         resultsLabelHot.text = "Hot: \(model.getVolumeHot()) ml"
     }
     
+    @IBAction func volumeModifed() {
+        volumeSlider.value = (volumeField.text as NSString).floatValue
+        volumeSliderChanged()
+    }
+    
     @IBAction func volumeSliderChanged() {
-        var value = String(format:"%.0f", volumeSlider.value)
-        volumeLabel.text = "\(value) \(volumeUnit)"
+        volumeField.text = String(format:"%.0f", volumeSlider.value)
         refreshUI()
+    }
+    
+    @IBAction func coldModifed() {
+        coldSlider.value = round((coldField.text as NSString).floatValue)
+        coldSliderChanged()
     }
     
     @IBAction func coldSliderChanged() {
-        var value = String(format:"%.0f", coldSlider.value)
-        coldLabel.text = "\(value) \(tempUnit)"
+        if (coldSlider.value >= hotSlider.value) {
+            coldSlider.value = hotSlider.value
+        }
+        if (coldSlider.value >= teaSlider.value) {
+            coldSlider.value = teaSlider.value
+        }
+        coldSlider.value = round(coldSlider.value)
+        coldField.text = String(format:"%.0f", coldSlider.value)
         refreshUI()
+    }
+    
+    @IBAction func hotModifed() {
+        hotSlider.value = (hotField.text as NSString).floatValue
+        hotSliderChanged()
     }
     
     @IBAction func hotSliderChanged() {
-        var value = String(format:"%.0f", hotSlider.value)
-        hotLabel.text = "\(value) \(tempUnit)"
+        if (hotSlider.value <= teaSlider.value) {
+            hotSlider.value = teaSlider.value
+        }
+        hotSlider.value = round(hotSlider.value)
+        hotField.text = String(format:"%.0f", hotSlider.value)
         refreshUI()
     }
     
-    @IBAction func targetSliderChanged() {
-        var value = String(format:"%.0f", targetSlider.value)
-        targetLabel.text = "\(value) \(tempUnit)"
+    @IBAction func teaModifed() {
+        teaSlider.value = round((teaField.text as NSString).floatValue)
+        teaSliderChanged()
+    }
+    
+    @IBAction func teaSliderChanged() {
+        teaField.text = String(format:"%.0f", teaSlider.value)
         refreshUI()
     }
 }

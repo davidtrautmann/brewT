@@ -18,6 +18,7 @@
 		8DE853AD19CD785A00E5DDFA /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE853AC19CD785A00E5DDFA /* TodayViewController.swift */; };
 		8DE853AF19CD785A00E5DDFA /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DE853AE19CD785A00E5DDFA /* MainInterface.storyboard */; };
 		8DE853B219CD785A00E5DDFA /* Widget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 8DE853A519CD785A00E5DDFA /* Widget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		8DE853B919CD99F200E5DDFA /* TemperatureModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D18786E19CD52A80066AA4E /* TemperatureModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -339,6 +340,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DE853B919CD99F200E5DDFA /* TemperatureModel.swift in Sources */,
 				8DE853AD19CD785A00E5DDFA /* TodayViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

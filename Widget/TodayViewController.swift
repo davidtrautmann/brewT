@@ -28,7 +28,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         // If there's no update required, use NCUpdateResult.NoData
         // If there's an update, use NCUpdateResult.NewData
         
-        
+        let model = TemperatureModel()
 
         completionHandler(NCUpdateResult.NewData)
     }

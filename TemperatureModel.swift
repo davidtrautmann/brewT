@@ -16,25 +16,40 @@ class TemperatureModel {
     
     var tempHot: Float = 0.0
     var tempCold: Float = 0.0
-    var tempTarget: Float = 0.0
+    var tempTea: Float = 0.0
     var volume: Float = 0.0
     
     var massCold: Float = 0.0
     var massHot: Float = 0.0
-    var massTarget: Float = 0.0
+    var massTea: Float = 0.0
     
     // Calculate result temperature
     func calculate() {
         var richmannFactor: Float
-        var kelvinCold = tempCold + nullKelvin
-        var kelvinHot = tempHot + nullKelvin
-        var kelvinTarget = tempTarget + nullKelvin
         
-        massTarget = (volume / 1000) * mWater
-        richmannFactor = (cWater * (kelvinTarget - kelvinHot)) / (cWater * (kelvinCold - kelvinTarget))
-        
-        massCold = (massTarget * richmannFactor) / (1 + richmannFactor)
-        massHot = massTarget - massCold
+        switch tempTea {
+        case tempCold:
+            // all cold water no hot water
+            massCold = massTea
+            massHot = 0
+            return
+        case tempHot:
+            // all hot water no cold water
+            massCold = 0
+            massHot = massTea
+            return
+        default:
+            // default calculation
+            var kelvinCold = tempCold + nullKelvin
+            var kelvinHot = tempHot + nullKelvin
+            var kelvinTarget = tempTea + nullKelvin
+            
+            massTea = (volume / 1000) * mWater
+            richmannFactor = (cWater * (kelvinTarget - kelvinHot)) / (cWater * (kelvinCold - kelvinTarget))
+            
+            massCold = (massTea * richmannFactor) / (1 + richmannFactor)
+            massHot = massTea - massCold
+        }
 }
     
     func getVolumeCold() -> String {
